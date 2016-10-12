@@ -30,7 +30,8 @@
         
         _customImageview = [[CustomImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width)];
         _customImageview.contentMode = UIViewContentModeScaleAspectFit;
-        NSString *url = @"http://i4.hexunimg.cn/2015-02-16/173423543.jpg";
+        //http://i4.hexunimg.cn/2015-02-16/173423543.jpg
+        NSString *url = @"http://img4.duitang.com/uploads/item/201505/18/20150518075910_tELcK.thumb.700_0.jpeg";
         [_customImageview sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
             [_customImageview setProgress:(CGFloat)receivedSize/expectedSize];

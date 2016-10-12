@@ -19,7 +19,7 @@
     
     if (self) {
         
-        
+        self.backgroundColor = [UIColor whiteColor];
         [self.layer addSublayer:self.progressLayer];
     }
     
@@ -81,6 +81,6 @@
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    //self.superview.layer.mask = nil;
+    self.superview.layer.mask = nil;
 }
 @end

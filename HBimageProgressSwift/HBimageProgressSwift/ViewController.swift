@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://i4.hexunimg.cn/2015-02-16/173423543.jpg"
+        let url = "http://easyread.ph.126.net/k_eW-I4ALlzo4Dp5YLQ8Qw==/7916860852475834715.jpg"
         let customImageView = CustomImageView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width))
+        customImageView.contentMode = .scaleAspectFit
         customImageView.sd_setImage(with: NSURL.init(string: url) as URL!, placeholderImage: nil, options: SDWebImageOptions(rawValue: UInt(0)), progress: { (receivedSize, expectedSize) in
             
-                customImageView.setProgress(progress: CGFloat(receivedSize/expectedSize))
+                customImageView.setProgress(progress: CGFloat(receivedSize)/CGFloat(expectedSize))
             
             }) { (image, error, cacheType, imageUrl) in
                 

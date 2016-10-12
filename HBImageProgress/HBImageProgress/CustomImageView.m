@@ -42,7 +42,7 @@
     
     if (progress == 1) {
         //loading完之后就加载Mask
-        [_circolarView addMaskAnimation];
+        [_circolarView performSelector:@selector(addMaskAnimation) withObject:nil afterDelay:0.1f];
     }
 }
 @end

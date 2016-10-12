@@ -19,9 +19,11 @@ class CircularLoaderView: UIView, CAAnimationDelegate {
         didSet {
             
             progressLayer?.strokeEnd = progress!
+           
             if progress == 1 {
                 
-                addMaskAnimation()
+                self.perform(#selector(addMaskAnimation), with: nil, afterDelay: 0.2)
+                
             }
         }
 
@@ -31,6 +33,7 @@ class CircularLoaderView: UIView, CAAnimationDelegate {
         
         super.init(frame: frame)
         
+        self.backgroundColor = UIColor.white
         initProgressLayer()
         
     }

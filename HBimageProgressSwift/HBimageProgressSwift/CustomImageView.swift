@@ -30,7 +30,7 @@ class CustomImageView: UIImageView {
     
     func setProgress(progress: CGFloat) {
         
-        
+        print(progress)
         circularView?.progress = progress
         
     }
